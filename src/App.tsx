@@ -14,6 +14,7 @@ import Main from '@/layout/Main/Main.tsx';
 import ScrollSection from './components/ScrollSection';
 import Interview from './layout/Interview/Interview';
 import Calender from './layout/Calender/Calender.tsx'
+import FloatingBar from './layout/FloatingBar/FloatingBar.tsx';
 
 function App() {
   // const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -83,7 +84,7 @@ function App() {
         <Heading1>신랑 신부에게</Heading1>
         <Guestbook />
       </Wrapper>
-      {/* <FloatingBar isVisible={isVisible} /> */}
+      <FloatingBar isVisible={isVisible} />
     </Container>
     // </NavermapsProvider>
   );
