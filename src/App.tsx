@@ -6,7 +6,6 @@ import { Heading1 } from '@/components/Text.tsx';
 import Wrapper from '@/components/Wrapper.tsx';
 import Account from '@/layout/Account/Account.tsx';
 import Container from '@/layout/Container.tsx';
-import FloatingBar from '@/layout/FloatingBar/FloatingBar.tsx';
 import GalleryWrap from '@/layout/Gallery/GalleryWrap.tsx';
 import Guestbook from '@/layout/Guestbook/Guestbook.tsx';
 import Invitation from '@/layout/Invitation/Invitation.tsx';
@@ -15,9 +14,6 @@ import Main from '@/layout/Main/Main.tsx';
 import ScrollSection from './components/ScrollSection';
 import Interview from './layout/Interview/Interview';
 import Calender from './layout/Calender/Calender.tsx'
-
-import YouTube, { YouTubeProps } from "react-youtube";
-
 
 function App() {
   // const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -30,17 +26,6 @@ function App() {
       window.removeEventListener('scroll', checkScrollPosition);
     };
   }, []);
-
-  const videoId = 'l4OOLrwWNMs';
-  const opts: YouTubeProps['opts'] = {
-    width: '0',
-    height: '0',
-    playerVars: {
-      autoplay: 1,
-      loop: 1,
-    },
-  };
-
 
   const checkScrollPosition = () => {
     if (galleryRef.current) {
@@ -60,10 +45,6 @@ function App() {
     <Container>
       <ScrollSection>
         <Wrapper>
-          {/* <YouTube
-            videoId={videoId}
-            opts={opts}
-          /> */}
           <Main />
         </Wrapper>
       </ScrollSection>

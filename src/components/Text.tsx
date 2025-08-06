@@ -24,8 +24,11 @@ export const PointTitle = styled.p`
 `;
 
 export const Paragraph = styled.p`
-  line-height: 2.2rem;
+  font-family: Cafe24Oneprettynight;
+  line-height: 2.1rem;
+  font-size: 1.1rem;
   white-space: pre-line;
+  margin-bottom: 30px;
 `;
 
 export const Caption = styled.p<{ textAlign?: string }>`
