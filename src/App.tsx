@@ -16,6 +16,8 @@ import ScrollSection from './components/ScrollSection';
 import Interview from './layout/Interview/Interview';
 import Calender from './layout/Calender/Calender.tsx'
 
+import YouTube, { YouTubeProps } from "react-youtube";
+
 
 function App() {
   // const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -28,6 +30,17 @@ function App() {
       window.removeEventListener('scroll', checkScrollPosition);
     };
   }, []);
+
+  const videoId = 'l4OOLrwWNMs';
+  const opts: YouTubeProps['opts'] = {
+    width: '0',
+    height: '0',
+    playerVars: {
+      autoplay: 1,
+      loop: 1,
+    },
+  };
+
 
   const checkScrollPosition = () => {
     if (galleryRef.current) {
@@ -47,6 +60,10 @@ function App() {
     <Container>
       <ScrollSection>
         <Wrapper>
+          {/* <YouTube
+            videoId={videoId}
+            opts={opts}
+          /> */}
           <Main />
         </Wrapper>
       </ScrollSection>
@@ -64,11 +81,11 @@ function App() {
       </ScrollSection>
       <ScrollSection>
         <Wrapper>
-        <Heading1>Q&A</Heading1>
-        <Interview />
+          <Heading1>Q&A</Heading1>
+          <Interview />
         </Wrapper>
         <Wrapper>
-        <Calender />
+          <Calender />
         </Wrapper>
         <Wrapper>
           <Heading1>마음 전하실 곳</Heading1>
@@ -85,7 +102,7 @@ function App() {
         <Heading1>신랑 신부에게</Heading1>
         <Guestbook />
       </Wrapper>
-      <FloatingBar isVisible={isVisible} />
+      {/* <FloatingBar isVisible={isVisible} /> */}
     </Container>
     // </NavermapsProvider>
   );

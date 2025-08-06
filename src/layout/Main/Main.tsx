@@ -10,29 +10,24 @@ const Main = () => {
     <div>
       <div style={{
         position: 'relative',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        textAlign: 'center',
+        verticalAlign: 'middle'
       }}>
         <OverlayText
           backgroundImage={mainImg}
-          // title="Our Wedding Day"
-          title="A Celebration of our love "
-          // subTitle="이다솔　♥　이영지"
+          title="A Celebration of our love"
           subTitle1='아름다운 날,'
-          subTitle2='소중한 분들을 초대합니다♥'
+          subTitle2='소중한 분들을 초대합니다.'
         />
         <Snowfall/>
+         
       </div>
       <NameContainer>
-        <NameBox>
-          <GroomBride>GROOM</GroomBride>
-          <Name>이다솔</Name>
-        </NameBox>
-        <NameBox>
-          <GroomBride>BRIDE</GroomBride>
-          <Name>이영지</Name>
-        </NameBox>
+        <Name>이다솔</Name>
+        <And>그리고,</And>
+        <Name>이영지</Name>
       </NameContainer>
-      {/* <MainTitle>{greeting.title}</MainTitle> */}
       <SubTitle>{greeting.eventDetail}</SubTitle>
     </div>
   );
@@ -42,47 +37,21 @@ export default Main;
 
 const NameContainer = styled.div`
   display: flex;
-  // width: 80vw;
-  margin: 20px auto;
-  // height: 100vh;
-`
-
-const NameBox = styled.div`
-  flex: 1;
-  // display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:baseline;
 `
 
-const GroomBride = styled.div`
-  // color: rgb(176, 188, 175);
-  color:rgb(216, 209, 78)
+const Name = styled.p`
+  font-size: 1.3rem;
+  letter-spacing: 7px;
+  width: 30%;
 `
 
-const Name = styled.div`
-  // color:rgb(187, 220, 184);
-  font-size: 1.8rem;
-  letter-spacing: 10px;
+const And = styled.p`
+  
 `
-
-// const AndTitle = styled.p`
-//   // font-family: HSSanTokki20-Regular, serif;
-//   font-size: 1.2rem;
-//   color: #2F2120;
-//   line-height: 120%;
-//   white-space: pre-line;
-// `;
-
-// const MainTitle = styled.p`
-//   // font-family: HSSanTokki20-Regular, serif;
-//   font-size: 1.7rem;
-//   color: #2F2120;
-//   line-height: 120%;
-//   white-space: pre-line;
-// `;
-
 const SubTitle = styled.p`
-  // font-size: 1.1rem;
+  font-size: 1.1rem;
   color: #2F2120;
   line-height: 140%;
   white-space: pre-line;
