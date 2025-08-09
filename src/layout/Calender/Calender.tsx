@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import styled from 'styled-components';
 
 interface CalendarDayProps{
   day: number;
@@ -13,78 +13,87 @@ function CalendarDay({ day, isWeddingDay, isHoliday }: CalendarDayProps) {
   const specialDayClass = isWeddingDay ? 'heart red' : '';
 
   return (
-    <div className={`calendar__day ${dayOfWeekClass} ${specialDayClass} ${holidayClass}`}>
+    <Day className={`calendar__day ${dayOfWeekClass} ${specialDayClass} ${holidayClass}`}>
       {day}
-    </div>
+    </Day>
   );
 }
 
 function Calendar() {
-
     const daysInMonth = 31; // 2024년 9월은 30일까지
     const firstDayOfWeek = 4; // 2024년 9월 1일은 일요일 (0부터 일요일, 1부터 월요일, ..., 6부터 토요일)
     const emptyDays = Array.from({ length: firstDayOfWeek }, () => null);
     const days = Array.from({ length: daysInMonth }, (_, index) => index + 1);
 
-    // 남은 시간 상태를 저장하는 객체 초기화
-    const [timeLeft, setTimeLeft] = useState({
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    });
-
-
-    useEffect(() => {
-      const updateTimer = () => {
-        const currentDate = new Date();
-        const targetDate = new Date('2026-01-10T17:00:00+0900');
-        const timeDiff = +targetDate - +currentDate;
-  
-        if (timeDiff > 0) {
-          // 남은 시간 계산
-          const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-  
-          setTimeLeft({ days, hours, minutes, seconds });
-        } else {
-          // 이벤트가 지났다면, 모든 값이 0이 되도록 설정
-          setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        }
-      };
-  
-      // 1초마다 updateTimer를 호출하여 남은 시간을 업데이트
-      const timer = setInterval(updateTimer, 1000);
-  
-      // 컴포넌트가 언마운트되면 타이머를 정리
-      return () => clearInterval(timer);
-    }, []);
-
   return (
-    <div className='container calendar'>
-      <h3>2026년 1월 10일 토요일 오후 5시</h3>
-      <div className='calendar__line'></div>
-      <div className="calendar__body">
-        <div className="calendar__weekdays">
+    <CalenderWrapper>
+      {/* <div className='calendar__line'></div> */}
+      <CalendarBody>
+        <CalendarHeader>2026년 1월</CalendarHeader>
+        <Weekdays>
           {['일', '월', '화', '수', '목', '금', '토'].map((day) => (
-            <span key={day}>{day}</span>
+            <Day key={day}>{day}</Day>
           ))}
-        </div>
-        <div className="calendar__days">
+        </Weekdays>
+        <Days>
           {emptyDays.map((_, index) => (
-            <div key={`empty-${index}`}></div>
+            <Day key={`empty-${index}`} />
           ))}
           {days.map((day) => (
             <CalendarDay key={day} day={day} isWeddingDay={day === 10} isHoliday={day === 1}/>
           ))}
-        </div>
-      </div>
-
-      <div>신랑♥신부의 결혼식</div> <div> <span className='calendar__remain-day'>{timeLeft.days}일</span> <span className='calendar__remain-day'>{timeLeft.hours}시간</span> <span className='calendar__remain-day'>{timeLeft.minutes}분</span> <span className='calendar__remain-day'>{timeLeft.seconds}초</span>전</div>
-    </div>
+        </Days>
+      </CalendarBody>
+    </CalenderWrapper>
   )
 }
+
+const CalenderWrapper = styled.div`
+  // display: flex;
+  width: 90%;
+  max-width: 380px;
+  flex-direction: column;
+  // padding: 20px;
+`;
+
+const CalendarHeader = styled.div`
+  font-size: 1.2rem;
+  padding: 10px 0;
+`
+
+const CalendarBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 30px;
+  // background-color: rgba(52, 134, 86, 0.07);
+  border: 1px dashed #e6ece1;
+  border-radius: 30px;
+`
+
+const Weekdays = styled.div`
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  gap: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+`
+
+const Days = styled.div`
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+  gap: 5px;
+`
+
+const Day = styled.div`
+  padding: 3px 9px;
+  text-align: center;
+  position: relative; /* 상대 위치 설정 */
+  width: 17px;
+`
 
 export default Calendar

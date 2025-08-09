@@ -6,7 +6,6 @@ import Wrapper from '@/components/Wrapper.tsx';
 import Account from '@/layout/Account/Account.tsx';
 import Container from '@/layout/Container.tsx';
 import GalleryWrap from '@/layout/Gallery/GalleryWrap.tsx';
-import Guestbook from '@/layout/Guestbook/Guestbook.tsx';
 import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
@@ -14,6 +13,7 @@ import ScrollSection from './components/ScrollSection';
 import Interview from './layout/Interview/Interview';
 import Calender from './layout/Calender/Calender.tsx'
 import FloatingBar from './layout/FloatingBar/FloatingBar.tsx';
+import RemainTime from './layout/Calender/RemainTime.tsx';
 
 function App() {
   // const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -54,18 +54,21 @@ function App() {
         </Wrapper>
       </ScrollSection>
       <ScrollSection>
+        <Wrapper>
+          <Calender />
+        </Wrapper>
+      </ScrollSection>
+      <ScrollSection>
         <Wrapper ref={galleryRef}>
           <Heading1>Gallery</Heading1>
           <GalleryWrap />
         </Wrapper>
       </ScrollSection>
+    
       <ScrollSection>
         <Wrapper>
           <Heading1>Q&A</Heading1>
           <Interview />
-        </Wrapper>
-        <Wrapper>
-          <Calender />
         </Wrapper>
         <Wrapper>
           <Heading1>마음 전하실 곳</Heading1>
@@ -78,10 +81,11 @@ function App() {
           <Location />
         </Wrapper>
       </ScrollSection>
-      <Wrapper>
-        <Heading1>신랑 신부에게</Heading1>
-        <Guestbook />
-      </Wrapper>
+      <ScrollSection>
+        <Wrapper>
+          <RemainTime />
+        </Wrapper>
+      </ScrollSection>
       <FloatingBar isVisible={isVisible} />
     </Container>
     // </NavermapsProvider>

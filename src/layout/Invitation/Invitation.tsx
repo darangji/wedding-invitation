@@ -17,7 +17,6 @@ const Invitation = () => {
 export default Invitation;
 
 const InvitationWrapper = styled.div`
-  // background-color: rgba(201, 226, 196, 0.1);
   width: 90%;
   padding: 50px 0;
   display: flex; 
