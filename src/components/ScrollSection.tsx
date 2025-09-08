@@ -12,7 +12,6 @@ function ScrollSection({ children }: ScrollSectionProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 2.0 }}
-      style={{ marginBottom: "50px" }}
     >
       {children}
     </motion.div>
