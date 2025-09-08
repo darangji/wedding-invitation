@@ -92,8 +92,8 @@
     "address2": "서울 서초구 반포대로 235 LL층\n02-3431-0230",
     "naverMap": "https://map.naver.com/p/directions/-/14137937.0522991,4509159.8102864,%EC%95%84%ED%8E%A0%EA%B0%80%EB%AA%A8%20%EB%B0%98%ED%8F%AC,1766687615,PLACE_POI/-/transit?c=15.00,0,0,0,dh",
     "kakaoMap": "https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,500705,1111493&rt1=&rt2=%EC%95%84%ED%8E%A0%EA%B0%80%EB%AA%A8%20%EB%B0%98%ED%8F%AC&rtIds=,1807085957",
-    "lat": 37.54222,
-    "lon": 126.952708
+    "lat": 37.500773,
+    "lon": 127.003258
   },
   "locationInfo": [
     {
