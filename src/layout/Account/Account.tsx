@@ -2,11 +2,12 @@ import styled from '@emotion/styled';
 import data from 'data.json';
 import AccountWrap from './AccountWrap.tsx';
 import Accordion from '@/components/Accordion.tsx';
+import ContentWrapper from '@/components/ContentWrapper.tsx';
 
 const Account = () => {
   const { hostInfo } = data;
   return (
-    <HostInfoWrapper>
+    <ContentWrapper>
       {hostInfo.map((host) => {
         return (
           <Accordion title={host.host} key={host.host}>
@@ -26,7 +27,7 @@ const Account = () => {
           </Accordion>
         );
       })}
-    </HostInfoWrapper>
+    </ContentWrapper>
   );
 };
 

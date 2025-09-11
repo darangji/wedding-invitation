@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 import QnA from './QnA';
+import ContentWrapper from '@/components/ContentWrapper';
 
 const Interview = () => {
   return (
-    <InterviewWrapper>
+    <ContentWrapper>
      <QnA />
-    </InterviewWrapper>
+    </ContentWrapper>
   );
 };
 

@@ -54,10 +54,12 @@ function RemainTime() {
 const RemainTimeWrapper = styled.div`
   display: flex;
   width: 70%;
+  max-width: 450px;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 0px;
   background-color: rgba(52, 134, 86, 0.07);
   border-radius: 20px;
+  margin-bottom: 50px;
 `;
 
 const RemainTimeText = styled.span`
