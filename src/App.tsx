@@ -49,7 +49,8 @@ function App() {
         </Wrapper>
       </ScrollSection>
       <ScrollSection>
-        <Wrapper>
+        <Wrapper ref={galleryRef}>
+          <Heading1> - Invitation - </Heading1>
           <Invitation />
         </Wrapper>
       </ScrollSection>
@@ -59,26 +60,27 @@ function App() {
         </Wrapper>
       </ScrollSection>
       <ScrollSection>
-        <Wrapper ref={galleryRef}>
+        <Wrapper>
           <Heading1>Gallery</Heading1>
           <GalleryWrap />
         </Wrapper>
       </ScrollSection>
-    
       <ScrollSection>
         <Wrapper>
           <Heading1>Q&A</Heading1>
           <Interview />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>마음 전하실 곳</Heading1>
-          <Account />
         </Wrapper>
       </ScrollSection>
       <ScrollSection>
         <Wrapper>
           <Heading1>오시는 길</Heading1>
           <Location />
+        </Wrapper>
+      </ScrollSection>
+      <ScrollSection>
+        <Wrapper>
+          <Heading1>마음 전하실 곳</Heading1>
+          <Account />
         </Wrapper>
       </ScrollSection>
       <ScrollSection>

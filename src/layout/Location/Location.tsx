@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import data from 'data.json';
 import Address from './Address.tsx';
 import Map from './Map.tsx';
@@ -12,7 +11,7 @@ const Location = () => {
     <ContentWrapper>
       <PointTitle>{mapInfo.address1}</PointTitle>
       <Caption textAlign={'center'}>{mapInfo.address2}</Caption>
-      {<Map />}
+      <Map />
       <MapButtons />
       <Address />
     </ContentWrapper>
@@ -20,9 +19,3 @@ const Location = () => {
 };
 
 export default Location;
-
-const LocationWrapper = styled.div`
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-`;

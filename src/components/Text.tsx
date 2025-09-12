@@ -15,7 +15,6 @@ export const Heading2 = styled.p`
 `;
 
 export const PointTitle = styled.p`
-  font-family: NanumSquareNeoBold;
   font-size: 0.9rem;
   line-height: 0.8;
   margin: 0;
@@ -32,7 +31,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Caption = styled.p<{ textAlign?: string }>`
-  font-family: NanumSquareNeo;
+  // font-family: NanumSquareNeo;
   font-size: 0.8rem;
   font-weight: 200;
   line-height: 1.8;

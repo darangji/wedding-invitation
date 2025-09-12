@@ -79,4 +79,5 @@ const Nav = styled.nav<{ isVisible: boolean }>`
   justify-content: center;
   gap: 5px;
   display: ${(props) => (props.isVisible ? 'flex' : 'none')};
+  z-index: 2000;
 `;

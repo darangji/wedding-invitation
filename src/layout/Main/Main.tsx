@@ -7,7 +7,7 @@ import Snowfall from '@/components/Snowfall';
 const Main = () => {
   const { greeting } = data;
   return (
-    <div>
+    <MainWrapper>
     <div style={{
         position: 'relative',
         overflow: 'hidden',
@@ -27,11 +27,15 @@ const Main = () => {
         <Name>이영지</Name>
       </NameContainer>
       <SubTitle>{greeting.eventDetail}</SubTitle>
-    </div>
+    </MainWrapper>
   );
 };
 
 export default Main;
+
+const MainWrapper = styled.div`
+  padding-bottom: 70px;
+`
 
 const NameContainer = styled.div`
   display: flex;

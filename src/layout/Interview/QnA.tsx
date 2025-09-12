@@ -26,7 +26,6 @@ const QnAWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 20px 0px;
   gap: 20px;
 `;
 
