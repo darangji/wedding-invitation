@@ -39,24 +39,24 @@
       "host": "신랑측",
       "accountInfo": [
         {
-          "name": "장세모",
+          "name": "이다솔",
           "relation": "신랑",
-          "bank": "카카오뱅크",
-          "account": "1234-56-789012",
+          "bank": "기업",
+          "account": "687-011827-02-016",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
         {
-          "name": "장아빠",
-          "relation": "아버지",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "name": "이경남",
+          "relation": "신랑 아버님",
+          "bank": "KB국민",
+          "account": "019240304266"
         },
         {
-          "name": "이엄마",
-          "relation": "어머니",
-          "bank": "농협",
-          "account": "123-45-678901"
+          "name": "차현숙",
+          "relation": "신랑 어머님",
+          "bank": "NH농협",
+          "account": "21703252006263"
         }
       ]
     },
@@ -64,22 +64,22 @@
       "host": "신부측",
       "accountInfo": [
         {
-          "name": "황네모",
+          "name": "이영지",
           "relation": "신부",
-          "bank": "토스뱅크",
-          "account": "1234-5678-9012",
+          "bank": "우리",
+          "account": "1002-748-962225",
           "kakaopayAccount": "",
           "tossAccount": ""
         },
         {
-          "name": "황아빠",
-          "relation": "아버지",
-          "bank": "농협",
+          "name": "이진철",
+          "relation": "신부 아버님",
+          "bank": "우리은행",
           "account": "123-45-678901"
         },
         {
-          "name": "이엄마",
-          "relation": "어머니",
+          "name": "황순옥",
+          "relation": "신부 어머님",
           "bank": "농협",
           "account": "123-45-678901"
         }
@@ -97,12 +97,12 @@
   },
   "locationInfo": [
     {
-      "title": "\uD83D\uDCCD 지하철",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 3·7·9호선 고속터미널역 5번 출구 (도보 2분)\n\uD83D\uDC49\uD83C\uDFFB 서래공원 방면 신호등 건넌 후 첫 번째 건물 (반포 효성빌딩)"
+      "title": "[지하철]",
+      "desc": " • 3·7·9호선 고속터미널역 5번 출구 (도보 2분)\n• 서래공원 방면 신호등 건넌 후 첫 번째 건물 (반포 효성빌딩)"
     },
     {
-      "title": "\uD83D\uDCCD 주차안내",
-      "desc": "\uD83D\uDC49\uD83C\uDFFB 건물 내 2시간 무료주차 (홀에서 주차정산 필요)"
+      "title": "[주차안내]",
+      "desc": "• 건물 내 2시간 무료주차 (홀에서 주차정산 필요)"
     }
   ],
   "interviewInfo":[

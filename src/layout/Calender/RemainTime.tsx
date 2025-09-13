@@ -57,7 +57,7 @@ const RemainTimeWrapper = styled.div`
   max-width: 450px;
   flex-direction: column;
   padding: 20px 0px;
-  background-color: rgba(52, 134, 86, 0.07);
+  background-color: rgba(230, 236, 225, 0.8);
   border-radius: 20px;
   margin-bottom: 50px;
 `;

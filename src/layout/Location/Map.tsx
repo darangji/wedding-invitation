@@ -10,6 +10,7 @@ const Map = () => {
       style={{
         width: '100%',
         height: '300px',
+        margin: '10px 0'
       }}>
       <NaverMap
         defaultCenter={new navermaps.LatLng(lat, lon)}
