@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Heading1 = styled.p`
   font-family: MaruBuri;
   font-size: 1.3rem;
-  margin: 10px;
+  margin: 20px;
   color: #3e6d50ff;
   white-space: pre-line;
 `;

@@ -65,7 +65,7 @@ const RemainTimeWrapper = styled.div`
 
 const RemainTimeText = styled.span`
     // color: rgb(218, 82, 82);
-    color: rgba(49, 158, 125, 1);
+    color: #3e6d50ff; // rgba(49, 158, 125, 1);
     font-weight: bold;
 `
 
