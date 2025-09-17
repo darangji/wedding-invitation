@@ -9,7 +9,7 @@ const Wrapper = styled.section`
   color: #222;
   max-width: 100%;
   box-sizing: border-box;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 `;
 
 export default Wrapper;

@@ -14,7 +14,11 @@ import { Grid, Navigation } from 'swiper/modules';
 import images from '@/layout/Gallery/Images.ts';
 import styled from "styled-components";
 
-function SlickGallery() {
+import { IoMdCloseCircle } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+
+function PhotoGallery() {
   const [index, setIndex] = useState(-1);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
@@ -71,9 +75,6 @@ function SlickGallery() {
     <Wrapper>
       <Swiper
         // grabCursor={true}
-        style={{
-          padding: "5px"
-        }}
         slidesPerView={2.5}
         grid={{
           rows: 2,
@@ -121,7 +122,7 @@ function SlickGallery() {
               <NavButton
                 left
                 onClick={() => setIndex((images.length + index - 1) % images.length)}
-              >&lt;</NavButton>
+              ><IoIosArrowBack /></NavButton>
               <img
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
@@ -143,25 +144,21 @@ function SlickGallery() {
               <NavButton
                 right
                 onClick={() => setIndex((index + 1) % images.length)}
-              >&gt;</NavButton>
+              ><IoIosArrowForward /></NavButton>
 
-<button 
-            onClick={() => setIndex(-1)}
-            style={{
-              position: 'absolute',
-              top: 0,
-              right: '5%',
-              cursor: 'pointer',
-              borderRadius: '50%',
-              border: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.2)',
-              color: 'white',
-              width: '25px',
-              height: '25px',
-              margin: '5px'
-              // position: 'absolute',
-            }}
-            >X</button>
+              <CloseButton
+                onClick={() => setIndex(-1)}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  right: '5%',
+                  cursor: 'pointer',
+                  border: 0,
+                  backgroundColor: 'transparent',
+                  color: 'rgba(0, 0, 0, 0.2)',
+                  margin: '5px'
+                }}
+              ><IoMdCloseCircle size={"25px"} /></CloseButton>
             </PopupSection>
           </Popup>
         </PopupWrapper> : <></>
@@ -207,6 +204,17 @@ const PopupSection = styled.div`
   position: relative;
 `
 
+const CloseButton = styled.button`
+  position: absolute;
+  top: 0;
+  right: 5%;
+  cursor: pointer;
+  border: 0;
+  backgroundColor: 'transparent';
+  color: 'rgba(0, 0, 0, 0.2)';
+  margin: '5px';
+`
+
 const NavButton = styled.button<{ left?: boolean; right?: boolean }>`
   position: absolute;
   top: 50%;
@@ -221,6 +229,7 @@ const NavButton = styled.button<{ left?: boolean; right?: boolean }>`
   border-radius: 50%;
   border: none;
   background-color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
@@ -232,4 +241,4 @@ const NavButton = styled.button<{ left?: boolean; right?: boolean }>`
   }
 `;
 
-export default SlickGallery;
+export default PhotoGallery;

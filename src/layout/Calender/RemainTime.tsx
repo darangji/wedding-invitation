@@ -54,6 +54,7 @@ function RemainTime() {
 const RemainTimeWrapper = styled.div`
   display: flex;
   width: 70%;
+  min-width: 300px;
   max-width: 450px;
   flex-direction: column;
   padding: 20px 0px;

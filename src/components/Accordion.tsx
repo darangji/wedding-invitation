@@ -19,7 +19,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
         <p>{title}</p>
 
         <span>
-          <ExpandMore fill="#8ce8b5ff" />
+          <ExpandMore fill="#e6ece1" />
         </span>
       </AccordionHeader>
 
@@ -33,7 +33,7 @@ export default Accordion;
 const AccordionWrapper = styled.div`
   border: 1px solid #e6ece1;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 15px;
   overflow: hidden;
   transition: all 0.3s ease;
 `;
@@ -42,11 +42,12 @@ const AccordionHeader = styled.div<{ isActive: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #e6ece1;
+  // background-color: #e6ece1;
   padding: 0 15px;
   cursor: pointer;
   & > p {
     color: #44484d;
+    margin: 12px 0;
   }
   & > span {
     display: flex;

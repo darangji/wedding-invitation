@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
-import SlickGallery from './PhotoGallery.tsx';
+import PhotoGallery from './PhotoGallery.tsx';
 
 const GalleryWrap = () => {
   return (
     <ContentsWrap>
       <ImageWrap>
-      <SlickGallery/>
+      <PhotoGallery/>
       </ImageWrap>
     </ContentsWrap>
   );
@@ -14,7 +14,7 @@ const GalleryWrap = () => {
 export default GalleryWrap;
 
 const ContentsWrap = styled.div`
-  width: 90%;
+  width: 100%;
   max-width: 450px;
   margin: 30px 0;
   box-sizing: border-box;
