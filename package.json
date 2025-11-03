@@ -37,7 +37,7 @@
     "react-youtube": "^10.1.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.19",
-    "swiper": "^11.2.10",
+    "swiper": "^12.0.3",
     "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {

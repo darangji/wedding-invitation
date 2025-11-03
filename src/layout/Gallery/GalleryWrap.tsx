@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
-import PhotoGallery from './PhotoGallery.tsx';
+import MyGallery from './MyGallery.tsx';
 
 const GalleryWrap = () => {
   return (
     <ContentsWrap>
       <ImageWrap>
-      <PhotoGallery/>
+      <MyGallery />
       </ImageWrap>
     </ContentsWrap>
   );
