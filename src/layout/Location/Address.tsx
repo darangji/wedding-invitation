@@ -23,8 +23,8 @@ const Address = () => {
 export default Address;
 
 const WayWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   align-items: flex-start;
   margin: 30px 10px;
   gap: 20px;
@@ -34,5 +34,6 @@ const Way = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 90%;
+  margin-bottom: 10px;
+  // width: 90%;
 `;
