@@ -19,6 +19,10 @@ import image17 from '@/assets/images/17.jpg'
 import image18 from '@/assets/images/18.jpg'
 import image19 from '@/assets/images/19.jpg'
 import image20 from '@/assets/images/20.jpg'
+import image21 from '@/assets/images/21.jpg'
+import image22 from '@/assets/images/22.jpg'
+import image23 from '@/assets/images/23.jpg'
+import image24 from '@/assets/images/24.jpg'
 
 import type { Photo } from "react-photo-album";
 
@@ -29,7 +33,8 @@ const imageSrc = [
   image01, image02, image03, image04, image05,
   image06, image07, image08, image09, image10,
   image11, image12, image13, image14, image15,
-  image16, image17, image18, image19, image20
+  image16, image17, image18, image19, image20,
+  image21, image22, image23, image24
 ]
 
 const images = imageSrc.map(src => {
