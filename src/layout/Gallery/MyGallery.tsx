@@ -11,7 +11,8 @@ import 'yet-another-react-lightbox/styles.css';
 
 import { Grid, Autoplay } from "swiper/modules";
 
-import { MdClose, MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { MdClose } from "react-icons/md";
+import { RiArrowLeftWideLine, RiArrowRightWideLine  } from "react-icons/ri";
 
 import images from '@/layout/Gallery/Images';
 
@@ -24,7 +25,7 @@ const GridSwiper: React.FC = () => {
   const buttonStyle: React.CSSProperties = {
     position: "absolute",
     width: "40px",
-    height: "40px",
+    height: "80%",
     borderRadius: "50%",
     display: "flex",
     justifyContent: "center",
@@ -34,6 +35,7 @@ const GridSwiper: React.FC = () => {
     userSelect: "none",
     transition: "background 0.3s",
     zIndex: 1000,
+    color: "rgba(255, 255, 255, 0.5)"
   };
 
   return (
@@ -78,7 +80,7 @@ const GridSwiper: React.FC = () => {
               <img
                 onClick={() => {
                   setLightboxIndex(index);
-                setLightboxOpen(true);
+                  setLightboxOpen(true);
                 }}
                 src={image.src}
                 alt={`slide-${index}`}
@@ -103,7 +105,7 @@ const GridSwiper: React.FC = () => {
         ))}
         <Lightbox
           open={lightboxOpen}
-        close={() => setLightboxOpen(false)}
+          close={() => setLightboxOpen(false)}
           slides={images}
           index={lightboxIndex}
           styles={{
@@ -111,37 +113,62 @@ const GridSwiper: React.FC = () => {
               "--yarl__color_backdrop": "rgba(0, 0, 0, 0.55)"
             },
             container: {
-              backdropFilter: "blur(6px)"
-            },                        
+              backdropFilter: "blur(6px)",
+            },
           }}
+          carousel={{
+    imageProps: {
+      style: {
+        width: "95%",
+        maxHeight: "90%",
+        borderRadius: "12px",
+        overflow: "hidden",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+        transition: "transform 0.4s ease, box-shadow 0.4s ease",
+      },
+    },
+  }}
           render={{
-          // Prev 버튼
-          buttonPrev: () => (
-            <div
-              onClick={() => setLightboxIndex((prev) => Math.max(prev - 1, 0))}
-              style={{ ...buttonStyle, left: "10px", top: "50%", transform: "translateY(-50%)" }}
-            >
-              <MdArrowBackIos size={20} />
-            </div>
-          ),
-          // Next 버튼
-          buttonNext: () => (
-            <div
-              onClick={() => setLightboxIndex((prev) => Math.min(prev + 1, images.length - 1))}
-              style={{ ...buttonStyle, right: "10px", top: "50%", transform: "translateY(-50%)" }}
-            >
-              <MdArrowForwardIos size={20} />
-            </div>
-          ),
-          // Close 버튼
-          buttonClose: () => (
-            <div
-              onClick={() => setLightboxOpen(false)}
-              style={{ ...buttonStyle, top: "10px", right: "10px", width: "35px", height: "35px" }}
-            >
-              <MdClose size={20} />
-            </div>
-          ),
+            // Prev 버튼
+            buttonPrev: () => (
+              <div
+                onClick={() => setLightboxIndex((prev) => Math.max((prev + images.length - 1) % images.length))}
+                style={{ ...buttonStyle, left: "20px", top: "50%", transform: "translateY(-50%)" }}
+              >
+                
+                <RiArrowLeftWideLine  size={40} />
+              </div>
+            ),
+            // Next 버튼
+            buttonNext: () => (
+              <div
+                onClick={() => setLightboxIndex((prev) => Math.min(prev + 1 % images.length))}
+                style={{ ...buttonStyle, right: "20px", top: "50%", transform: "translateY(-50%)" }}
+              >
+                <RiArrowRightWideLine   size={40} />
+              </div>
+            ),
+            // Close 버튼
+            buttonClose: () => (
+              <div
+                onClick={() => setLightboxOpen(false)}
+                style={{
+                  ...buttonStyle,
+                  position: "fixed",
+                  width: "40px",
+                  height: "40px",
+                  bottom: "40px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  boxShadow: "0 2px 10px rgba(77, 77, 77, 0.46)",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                }}
+              >
+                {/* <p>닫기</p> */}
+                <MdClose size={24} />
+              </div>
+            ),
           }}
         />
       </Swiper>

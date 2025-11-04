@@ -34,7 +34,7 @@ const Main = () => {
 export default Main;
 
 const MainWrapper = styled.div`
-  padding-bottom: 70px;
+  padding-bottom: 90px;
 `
 
 const NameContainer = styled.div`
