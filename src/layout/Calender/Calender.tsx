@@ -49,11 +49,11 @@ function Calendar() {
 }
 
 const CalenderWrapper = styled.div`
-  // display: flex;
   width: 90%;
   max-width: 380px;
   flex-direction: column;
-  // padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 `;
 
 const CalendarHeader = styled.div`

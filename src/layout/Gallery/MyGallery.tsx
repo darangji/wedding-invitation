@@ -30,7 +30,6 @@ const GridSwiper: React.FC = () => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    cursor: "pointer",
     fontSize: "20px",
     userSelect: "none",
     transition: "background 0.3s",
